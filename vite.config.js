@@ -79,7 +79,7 @@ export default defineConfig((command)=>{
 
       rollupOptions: {
         //忽略打包vue、element-plus
-        // external: ['vue', 'element-plus'],
+        external: ['vue'],
 
         input: [fileURLToPath(new URL('./src/components/index.js', import.meta.url))],
 
@@ -90,7 +90,7 @@ export default defineConfig((command)=>{
             entryFileNames: '[name].js',
             //让打包目录和我们目录对应
             preserveModules: false,
-            exports: 'auto',
+            exports: 'named',
             //配置打包根目录
             dir: resolve(__dirname, './fmone-coe-ui/es'),
           },
@@ -100,7 +100,7 @@ export default defineConfig((command)=>{
             entryFileNames: '[name].js',
             //让打包目录和我们目录对应
             preserveModules: false,
-            exports: 'auto',
+            exports: 'named',
             //配置打包根目录
             dir: resolve(__dirname, './fmone-coe-ui/lib'),
           },
@@ -115,8 +115,12 @@ export default defineConfig((command)=>{
     },
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
-      }
+        '@': resolve(__dirname, './src'),
+        'vue': fileURLToPath(new URL('./node_modules/vue', import.meta.url))
+      },
+      dedupe: [
+        'vue'
+      ]
     }
   }
 })
