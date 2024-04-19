@@ -1,12 +1,18 @@
 <template>
-  <div></div>
+  <el-button :type="type">
+    <slot></slot>
+  </el-button>
 </template>
 
-<script lang="ts">
+<script>
 import {defineComponent} from 'vue';
 
 export default defineComponent({
-  name: 'AboutView',
+  name: 'FmoneButton',
+
+  props: {
+    type: String
+  },
 
   setup() {
     return {}
