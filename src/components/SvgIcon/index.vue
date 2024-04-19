@@ -5,9 +5,11 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue';
+  import { defineComponent,toRefs, computed, } from 'vue';
 
   export default defineComponent({
+    name: 'SvgIcon',
+
     props: {
       iconName: {
         type: String,
