@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "main": "./ui/lib/src/components/index.js",
-  "module": "./ui/es/src/components/index.js",
+  "main": "./fmone-coe-ui/lib/index.js",
+  "module": "./fmone-coe-ui/es/index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
