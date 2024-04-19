@@ -1,10 +1,12 @@
 import svgIcon from "./SvgIcon/index.vue";
+import FmoneTree from "./Tree/FmoneTree.vue";
 
 export {
-  svgIcon
+  svgIcon,
+  FmoneTree
 }
 
-const components = [svgIcon];
+const components = [svgIcon, FmoneTree];
 
 const FmoneCoeUi = {
   install(App) {

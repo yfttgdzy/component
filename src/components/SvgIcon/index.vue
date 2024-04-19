@@ -8,7 +8,7 @@
   import { defineComponent,toRefs, computed, } from 'vue';
 
   export default defineComponent({
-    name: 'SvgIcon',
+    name: 'FmoneIcon',
 
     props: {
       iconName: {

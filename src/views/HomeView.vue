@@ -1,6 +1,6 @@
 <template>
   <div>
-    <fmone-tree :datalist="datalist"></fmone-tree>
+    <fmone-tree :data="datalist"></fmone-tree>
   </div>
 </template>
 
