@@ -92,7 +92,7 @@ export default defineConfig((command)=>{
             preserveModules: false,
             exports: 'auto',
             //配置打包根目录
-            dir: resolve(__dirname, './fmone-ui/es'),
+            dir: resolve(__dirname, './fmone-coe-ui/es'),
           },
           {
             // CommonJS，只能在 NodeJS 上运行，使用 require("module") 读取并加载模块。
@@ -102,7 +102,7 @@ export default defineConfig((command)=>{
             preserveModules: false,
             exports: 'auto',
             //配置打包根目录
-            dir: resolve(__dirname, './fmone-ui/lib'),
+            dir: resolve(__dirname, './fmone-coe-ui/lib'),
           },
         ],
       },

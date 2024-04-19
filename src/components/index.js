@@ -8,7 +8,7 @@ export {
 
 const components = [fmoneTree, svgIcon];
 
-const CoeComponent = {
+const FmoneCoeUi = {
   install(App) {
     components.forEach(item => {
       App.component(item.name, item)
@@ -16,4 +16,4 @@ const CoeComponent = {
   }
 }
 
-export default CoeComponent
+export default FmoneCoeUi
