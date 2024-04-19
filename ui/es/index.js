@@ -10680,7 +10680,7 @@ function gw(e, t, n, o, r, s) {
 const mw = /* @__PURE__ */ bc(aw, [["render", gw]]), yw = [mw, _c], bw = {
   install(e) {
     yw.forEach((t) => {
-      e.components(t.name || t, t);
+      e.component(t.name || t, t);
     });
   }
 };
