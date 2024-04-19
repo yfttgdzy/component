@@ -1,5 +1,3 @@
-import { PropType } from 'vue';
-
 export default {
   currentNodeKey: {
     type: String,

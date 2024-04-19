@@ -15,6 +15,9 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 // https://vitejs.dev/config/
 export default defineConfig((command)=>{
   return {
+    server: {
+      port: '3000'
+    },
     plugins: [
       vue(),
       vueJsx(),
@@ -76,7 +79,7 @@ export default defineConfig((command)=>{
 
       rollupOptions: {
         //忽略打包vue、element-plus
-        external: ['vue', 'element-plus'],
+        // external: ['vue', 'element-plus'],
 
         input: [fileURLToPath(new URL('./src/components/index.js', import.meta.url))],
 
@@ -86,8 +89,8 @@ export default defineConfig((command)=>{
             //不用打包成.es.js,这里我们想把它打包成.js
             entryFileNames: '[name].js',
             //让打包目录和我们目录对应
-            preserveModules: true,
-            exports: 'named',
+            preserveModules: false,
+            exports: 'auto',
             //配置打包根目录
             dir: resolve(__dirname, './ui/es'),
           },
@@ -96,8 +99,8 @@ export default defineConfig((command)=>{
             format: 'cjs',
             entryFileNames: '[name].js',
             //让打包目录和我们目录对应
-            preserveModules: true,
-            exports: 'named',
+            preserveModules: false,
+            exports: 'auto',
             //配置打包根目录
             dir: resolve(__dirname, './ui/lib'),
           },
