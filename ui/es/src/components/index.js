@@ -1,13 +1,15 @@
 import e from "./FmoneTree/FmoneTree.vue.js";
-const t = [e], a = {
+import t from "./SvgIcon/index.vue.js";
+const m = [e, t], c = {
   install(n) {
-    t.forEach((o) => {
+    m.forEach((o) => {
       n.components(o.name || o, o);
     });
   }
 };
 export {
-  a as default,
-  e as fmoneTree
+  c as default,
+  e as fmoneTree,
+  t as svgIcon
 };
 //# sourceMappingURL=index.js.map

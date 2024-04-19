@@ -1,10 +1,12 @@
 import fmoneTree from "./FmoneTree/FmoneTree.vue";
+import svgIcon from "./SvgIcon/index.vue";
 
 export {
-  fmoneTree
+  fmoneTree,
+  svgIcon
 }
 
-const components = [fmoneTree];
+const components = [fmoneTree, svgIcon];
 
 const CoeComponent = {
   install(App) {
