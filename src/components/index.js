@@ -11,7 +11,7 @@ const components = [fmoneTree, svgIcon];
 const CoeComponent = {
   install(App) {
     components.forEach(item => {
-      App.components(item.name || item, item)
+      App.component(item.name || item, item)
     })
   }
 }
